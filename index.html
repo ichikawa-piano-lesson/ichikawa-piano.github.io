@@ -2,7 +2,6 @@
 <html lang="ja">
 
 <head>
-  <meta name="robots" content="noindex,nofollow">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
@@ -29,7 +28,15 @@
 
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!--Googleアナリティクスタグ-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-45FXWRST10"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-45FXWRST10');
+  </script>
   <!-- css -->
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
   <!-- <link rel="stylesheet" href="css/style.css"> -->
@@ -47,14 +54,14 @@
     <div class="header__inner md-none">
       <nav class="header__nav">
           <ul class="header__items">
-              <li class="header__item"><a href="#introduction" class="header__link">講師紹介</a></li>
+              <li class="header__item"><a href="#introduction" class="header__link">教室紹介</a></li>
               <li class="header__item"><a href="#lesson" class="header__link">レッスン内容</a></li>
               <li class="header__item"><a href="#voice" class="header__link">生徒さんの声</a></li>
               <li class="header__item"><a href="#news" class="header__link">ブログ</a></li>
 
               <li class="header__item"><a href="#contact" class="header__link header__link--contact">お問い合わせ</a></li>
           </ul>
-      </nav> 
+      </nav>
     </div> <!-- //header__inner -->
 
     <div class="hamburger js-hamburger md-show"><!-- ハンバーガー -->
@@ -66,7 +73,7 @@
       <div class="drawer-menu__inner">
         <ul class="drawer-menu__items">
           <li class="drawer-menu__item">
-            <a href="#introduction" class="drawer-menu__link">講師紹介</a>
+            <a href="#introduction" class="drawer-menu__link">教室紹介</a>
           </li>
           <li class="drawer-menu__item">
             <a href="#lesson" class="drawer-menu__link">レッスン内容</a>
@@ -517,7 +524,9 @@
           </div>
         </div>
       </div>
-      <a href="#fv"><img class="for-top-btn hidden" src="images/Top-btn.png" alt="トップへ戻るボタン"></a>
+      <a href="#fv" class="for-top-btn hidden" aria-label="ページ上部へ"></a>
+
+      <!-- <a  class="for-top-btn-wrap" href="#fv"><img class="for-top-btn hidden" src="images/Top-btn.png" alt="トップへ戻るボタン"></a> -->
     </section><!--blog-->
   </main>
   <footer class="footer"></footer>
