@@ -1328,7 +1328,7 @@ select::-ms-expand {
   color: #8F712A;
   text-align: center;
   padding-top: 50px;
-  background-image: url(/images/orange-back.png);
+  background-image: url(../images/orange-back.png);
   background-color: #E5DAC5;
 }
 @media screen and (max-width: 768px) {
@@ -1386,7 +1386,12 @@ select::-ms-expand {
   text-align: left; /* 中央寄せを防ぐ */
   margin-top: 2rem;
   list-style-position: outside; /* ビュレットをリストの外側に */
-  padding-left: 1.5em; /* ビュレットの分のスペースを確保 */
+  padding-left: 1.5em;
+}
+@media screen and (max-width: 768px) {
+  .rules__list {
+    padding-left: 0;
+  }
 }
 
 .rules__item {
@@ -1574,7 +1579,7 @@ select::-ms-expand {
 }
 @media screen and (max-width: 1024px) {
   .news__board {
-    padding: 40px 40px 20px;
+    padding: 40px 30px 20px;
   }
 }
 
@@ -1642,7 +1647,7 @@ select::-ms-expand {
 }
 @media screen and (max-width: 768px) {
   .accordion__content {
-    padding: 16px 60px 24px;
+    padding: 16px 20px 24px;
   }
 }
 
@@ -1882,18 +1887,26 @@ select::-ms-expand {
 }
 
 .for-top-btn {
-  width: 280px;
-  aspect-ratio: 1/1;
   position: fixed;
-  bottom: 20px;
-  right: -20px;
-  z-index: 2000;
-}
-@media screen and (max-width: 1024px) {
-  .for-top-btn {
-    bottom: 15px;
-    right: -30px;
-  }
+  left: -40px;
+  bottom: 0px;
+  z-index: 20000;
+  width: 200px;
+  aspect-ratio: 1/1;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  /* 背景に実画像を表示（そのままの色） */
+  background: url("../images/Top-btn.png") center/contain no-repeat;
+  /* ★ 画像のアルファ（透明・不透明）で当たり判定も切り抜く */
+  -webkit-mask-image: url("../images/Top-btn.png"); /* Safari/iOS */
+  mask-image: url("../images/Top-btn.png");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
 }
 
 .for-top-btn.hidden {
